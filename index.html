@@ -5,44 +5,40 @@
   <title>Turk Tili Mini App</title>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <style>
-    body {margin:0; font-family:Arial; background:#f2f2f2; display:flex; justify-content:center; align-items:center; height:100vh;}
-    .container {background:#fff; padding:20px; border-radius:12px; width:90%; max-width:400px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.1);}
-    h1 {margin-bottom:10px; font-size:22px;}
-    button {margin:8px 0; padding:12px; width:100%; border:none; border-radius:8px; background-color:#2aabee; color:#fff; font-size:16px; cursor:pointer;}
-    button:active {background-color:#1e90cc;}
+    body {margin:0;font-family:Arial;background:#f2f2f2;display:flex;justify-content:center;align-items:center;height:100vh;}
+    .container {background:#fff;padding:20px;border-radius:12px;width:90%;max-width:400px;text-align:center;box-shadow:0 10px 25px rgba(0,0,0,0.1);}
+    h1{margin-bottom:10px;font-size:22px;}
+    button{margin:8px 0;padding:12px;width:100%;border:none;border-radius:8px;background-color:#2aabee;color:#fff;font-size:16px;cursor:pointer;}
+    button:active{background-color:#1e90cc;}
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Turk Tili Mini App</h1>
-    <p>Tilni tanlang:</p>
+<div class="container">
+  <h1>Turk Tili Mini App</h1>
+  <p>Tilni tanlang:</p>
 
-    <!-- Til tugmalari -->
-    <button onclick="setLanguage('uz')">O‘zbek</button>
-    <button onclick="setLanguage('ru')">Rus</button>
-    <button onclick="setLanguage('en')">Ingliz</button>
-    <button onclick="setLanguage('tr')">Turk</button>
+  <button onclick="setLanguage('uz')">O‘zbek</button>
+  <button onclick="setLanguage('ru')">Rus</button>
+  <button onclick="setLanguage('en')">Ingliz</button>
+  <button onclick="setLanguage('tr')">Turk</button>
 
-    <!-- Asosiy tugmalar -->
-    <div id="main-buttons" style="margin-top:20px; display:none;">
-      <button onclick="alert('Daraja bo‘yicha testlar')">Daraja bo‘yicha testlar</button>
-      <button onclick="alert('Mavzular bo‘yicha imtihon')">Mavzular bo‘yicha imtihon</button>
-      <button onclick="alert('TYS / Multilevel')">TYS / Multilevel</button>
-    </div>
+  <div id="main-buttons" style="margin-top:20px;display:none;">
+    <button onclick="alert('Daraja bo‘yicha testlar')">Daraja bo‘yicha testlar</button>
+    <button onclick="alert('Mavzular bo‘yicha imtihon')">Mavzular bo‘yicha imtihon</button>
+    <button onclick="alert('TYS / Multilevel')">TYS / Multilevel</button>
+    <button onclick="alert('5 ta tekin demo test')">Demo Testlar (5 ta)</button>
   </div>
+</div>
 
-  <script>
-    const tg = window.Telegram.WebApp;
-    tg.ready();
+<script>
+  const tg = window.Telegram.WebApp;
+  tg.ready();
 
-    function setLanguage(lang) {
-      // Tugmalar chiqadi
-      document.getElementById("main-buttons").style.display = "block";
-      
-      alert("Tanlangan til: " + lang.toUpperCase());
-    }
-  </script>
+  function setLanguage(lang){
+    document.getElementById("main-buttons").style.display = "block";
+    alert("Tanlangan til: "+lang.toUpperCase());
+  }
+</script>
 </body>
 </html>
